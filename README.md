@@ -1,7 +1,4 @@
- <!-- Profile Image -->
-<p align="center">
-  <img src="https://your-profile-image-url.com" alt="Your Name" width="200" height="200">
-</p>
+ 
 
 <!-- Header -->
 <h1 align="center">Hi there, I'm Atharva! 👋</h1>
