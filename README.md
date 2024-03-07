@@ -9,7 +9,7 @@
 ## 🚀 About Me
 
 - 💼 Currently working on [CareVault Backend](https://github.com/Atharva-Kanherkar/CareVault-Backend)
-- 🌱 Learning more about blockchain technologies and decentralized applications (dApps)
+- 🌱 Learning more about blockchain technologies and decentralized applications (dApps) and NextJS14
 - 💬 Ask me about JavaScript, TypeScript, React, Node.js, GraphQL, or anything related to web development
 - 📫 How to reach me: [atharvakanherkar25@gmail.com](mailto:atharvakanherkar25@gmail.com)
 - 😄 Pronouns: He/Him
