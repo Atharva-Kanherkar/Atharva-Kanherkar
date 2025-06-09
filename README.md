@@ -13,4 +13,4 @@
 
 
 
- Freindly Neighbourhood coder
+friendly neighbourhood coder
