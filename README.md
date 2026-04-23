@@ -1,7 +1,7 @@
  
 
 <!-- Header -->
-<h1 align="center">I am atharva i guess</h1>
+<h1 align="center">Apart from a full time job @rimo, a tokyo based AI startup, i spend my time tinkering hard. making toy projects, sometimes serious ones, sometimes they dont just get completed, sometimes fully fledged projects get abandoned because something else caught my attention. how ever, my main goals is to tinker, curate, and solve problems. thats what i do all day. apart from that, i like working out, listening to hip hop music, and cooking. be my guest someday? also, open source is my philosophy. and itll always be like that. </h1>
 
  
 
