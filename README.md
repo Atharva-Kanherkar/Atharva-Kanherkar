@@ -2,7 +2,7 @@
 <h1 align="center">Hey, I'm Atharva 👋</h1>
 
 <p align="center">
-  Apart from working full-time at <b>Rimo</b>, a Tokyo-based AI startup, I spend most of my time tinkering hard.
+  Apart from working  at <b>Rimo</b>, a Tokyo-based AI startup, I spend most of my time tinkering hard.
   I build toy projects, serious projects, half-finished experiments, and sometimes fully-fledged ideas that get abandoned
   because something shinier caught my attention.
 </p>
