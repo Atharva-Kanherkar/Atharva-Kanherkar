@@ -29,6 +29,23 @@ orchestration loops, evals, Claude Code skills, and turning prompts into real pr
 thing: backend, frontend, and the deploy. Across GSoC and LFX I've also shipped production full-stack
 features into established open-source projects (Scala, mainframe tooling).
 
+### 🌍 Open source & programs
+
+**🟣 Google Summer of Code 2025 · [Scala Center](https://www.gsocorganizations.dev/organization/scala-center/)** — _[workflows4s](https://github.com/business4s/workflows4s)_
+Built a production full-stack **Web UI for tracking & debugging workflows**: a Scala.js + **Tyrian** (Elm-style) frontend, a type-safe **Tapir** REST/OpenAPI backend, client-side **Mermaid** execution-graph visualization, and a Dockerized **Fly.io** CI/CD deploy. 8 PRs on the project.
+&nbsp;&nbsp;↳ [GSoC project](https://summerofcode.withgoogle.com/archive/2025/projects/BPm3F7G8) · [write-up (Business4s Blog)](https://medium.com/business4s-blog/gsoc-2025-building-a-web-ui-for-workflows4s-with-scala-js-and-tyrian-cf4b482dbf63) · [final report](https://gist.github.com/Atharva-Kanherkar/2c8d15d6219d7800e8ff6c474a2a7358)
+
+**🔵 LFX Mentorship 2024 · Open Mainframe Project (Linux Foundation)** — _[Zowe](https://github.com/zowe)_
+Worked on the **Zowe App Store UI** and Zowe server stability, dev-environment, and the Installation Wizard ([`zlux-app-server`](https://github.com/zowe/zlux-app-server)). Mentored by Leanid Astakou (Rocket Software).
+&nbsp;&nbsp;↳ [Open Mainframe Project write-up](https://openmainframeproject.org/blog/summer-2024-zowe-app-store-ui/)
+
+**Selected open-source contributions:**
+[workflows4s](https://github.com/business4s/workflows4s/pulls?q=author%3AAtharva-Kanherkar) (Scala, 8) ·
+[Zowe `zlux-app-server`](https://github.com/zowe/zlux-app-server/pulls?q=author%3AAtharva-Kanherkar) ·
+[KubeArmor](https://github.com/kubearmor/KubeArmor/pull/1928) (build info → systemd packaging) ·
+[doodle](https://github.com/creativescala/doodle/pulls?q=author%3AAtharva-Kanherkar) (gradient fill/stroke on the Canvas backend) ·
+[cats-effect](https://github.com/typelevel/cats-effect/pulls?q=author%3AAtharva-Kanherkar) (Typelevel)
+
 ### ⚔️ AgentClash — open-source eval platform for AI agents
 
 <p>
@@ -50,35 +67,17 @@ that explains *why* one agent passed and another failed.
 
 I've shipped **39 merged PRs** across the platform — the Try-CLI demo system, eval persistence, prebaked E2B templates, the free-trial gateway/auth, and UI. &nbsp;<sub>Stack: TypeScript · Next.js · E2B · CI/CD</sub>
 
-### 🌍 Open source & programs
-
-**🟣 Google Summer of Code 2025 · [Scala Center](https://www.gsocorganizations.dev/organization/scala-center/)** — _[workflows4s](https://github.com/business4s/workflows4s)_
-Built a production full-stack **Web UI for tracking & debugging workflows**: a Scala.js + **Tyrian** (Elm-style) frontend, a type-safe **Tapir** REST/OpenAPI backend, client-side **Mermaid** execution-graph visualization, and a Dockerized **Fly.io** CI/CD deploy. 8 PRs on the project.
-&nbsp;&nbsp;↳ [GSoC project](https://summerofcode.withgoogle.com/archive/2025/projects/BPm3F7G8) · [write-up (Business4s Blog)](https://medium.com/business4s-blog/gsoc-2025-building-a-web-ui-for-workflows4s-with-scala-js-and-tyrian-cf4b482dbf63) · [final report](https://gist.github.com/Atharva-Kanherkar/2c8d15d6219d7800e8ff6c474a2a7358)
-
-**🔵 LFX Mentorship 2024 · Open Mainframe Project (Linux Foundation)** — _[Zowe](https://github.com/zowe)_
-Worked on the **Zowe App Store UI** and Zowe server stability, dev-environment, and the Installation Wizard ([`zlux-app-server`](https://github.com/zowe/zlux-app-server)). Mentored by Leanid Astakou (Rocket Software).
-&nbsp;&nbsp;↳ [Open Mainframe Project write-up](https://openmainframeproject.org/blog/summer-2024-zowe-app-store-ui/)
-
-**Selected open-source contributions:**
-[workflows4s](https://github.com/business4s/workflows4s/pulls?q=author%3AAtharva-Kanherkar) (Scala, 8) ·
-[Zowe `zlux-app-server`](https://github.com/zowe/zlux-app-server/pulls?q=author%3AAtharva-Kanherkar) ·
-[KubeArmor](https://github.com/kubearmor/KubeArmor/pull/1928) (build info → systemd packaging) ·
-[doodle](https://github.com/creativescala/doodle/pulls?q=author%3AAtharva-Kanherkar) (gradient fill/stroke on the Canvas backend) ·
-[cats-effect](https://github.com/typelevel/cats-effect/pulls?q=author%3AAtharva-Kanherkar) (Typelevel)
-
 ### 🚀 Featured projects
 
 | Project | What it is | Stack | Links |
 | --- | --- | --- | --- |
 | **chalkboard** | Open-source engine that turns a prompt into a narrated whiteboard explainer video — real images, diagrams, subtitles, music, vision self-correction. MIT, self-hostable, $0 with local models. | TS · Playwright · ffmpeg · LLMs | [repo](https://github.com/Atharva-Kanherkar/chalkboard) · [demo](https://github.com/Atharva-Kanherkar/chalkboard/releases/tag/v0.1.0) |
+| **agentic-memory** | Cognitive memory for AI agents — separate semantic / episodic / procedural stores, multimodal embeddings (Gemini), grounded in DeepMind's AGI cognitive framework. | Python · Gemini · embeddings | [repo](https://github.com/agentclash/agentic-memory) · [live ↗](https://memory.agentclash.dev) |
 | **skillware** | An AI learning harness that orchestrates the learner: pick a topic, get a syllabus + guided path. _(deployed; source private)_ | TS · Next.js · LLMs | [live ↗](https://skillware.vercel.app) |
 | **agent-trace** | Full observability into a Claude Code run — trace every step an agent takes. | TypeScript | [repo](https://github.com/Atharva-Kanherkar/agent-trace) |
 | **voicey** | Real-time voice translation web app. | TypeScript | [repo](https://github.com/Atharva-Kanherkar/voicey) |
 | **e2b-go** | Unofficial Go SDK for [E2B](https://e2b.dev) sandboxes. | Go | [repo](https://github.com/Atharva-Kanherkar/e2b-go) |
 | **RedLead** | Reddit lead-generation SaaS. | TypeScript | [live ↗](https://www.redlead.net/) |
-
-<sub>More live: <a href="https://siptrack.vercel.app">siptrack</a> · <a href="https://koe-neon.vercel.app">koe</a> · <a href="https://chainarena.vercel.app">ChainArena</a> · <a href="https://pulse-seven-blue.vercel.app">Pulse</a> · and ~90 repos on the profile.</sub>
 
 ### 🧩 Claude Code skills (open source)
 
@@ -110,6 +109,10 @@ Building [Rimo Voice](https://rimo.app) — AI that transcribes and summarizes b
 **Web:** Next.js · React · Node · Hono · Scala.js (Tyrian) · Tapir
 **AI:** LLM apps · agents & orchestration · RAG · evals · Claude Code skills · OpenAI / Anthropic / Gemini
 **Infra:** E2B · Vercel · Fly.io · Docker · AWS · Redis · MongoDB · Postgres
+
+> 🎮 Quick quiz: one of these is a Pokémon, not a framework — **Tyrian**, **Tapir**, or **Hono**? Trick question, they all sound like gym leaders. (It's Tyranitar I keep `import`-ing by accident.)
+
+Honestly though, labels aside — **I'm just an engineer.** Point me at any stack, any domain, anything weird, and I'll learn it on the go. That's the whole job. 🚀
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Atharva-Kanherkar&show_icons=true&hide_border=true&theme=tokyonight&count_private=true" height="150" alt="stats">
