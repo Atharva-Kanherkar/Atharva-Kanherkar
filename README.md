@@ -39,7 +39,7 @@ Built a production full-stack **Web UI for tracking & debugging workflows**: a S
 Worked on the **Zowe App Store UI** and Zowe server stability, dev-environment, and the Installation Wizard ([`zlux-app-server`](https://github.com/zowe/zlux-app-server)). Mentored by Leanid Astakou (Rocket Software).
 &nbsp;&nbsp;↳ [Open Mainframe Project write-up](https://openmainframeproject.org/blog/summer-2024-zowe-app-store-ui/)
 
-**Selected merged PRs across the ecosystem:**
+**Selected open-source contributions:**
 [workflows4s](https://github.com/business4s/workflows4s/pulls?q=author%3AAtharva-Kanherkar) (Scala, 8) ·
 [Zowe `zlux-app-server`](https://github.com/zowe/zlux-app-server/pulls?q=author%3AAtharva-Kanherkar) ·
 [KubeArmor](https://github.com/kubearmor/KubeArmor/pull/1928) (build info → systemd packaging) ·
