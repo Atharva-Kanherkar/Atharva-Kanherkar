@@ -29,6 +29,27 @@ orchestration loops, evals, Claude Code skills, and turning prompts into real pr
 thing: backend, frontend, and the deploy. Across GSoC and LFX I've also shipped production full-stack
 features into established open-source projects (Scala, mainframe tooling).
 
+### ⚔️ AgentClash — open-source eval platform for AI agents
+
+<p>
+  <a href="https://www.agentclash.dev"><b>agentclash.dev</b></a> ·
+  <a href="https://www.agentclash.dev/docs">docs</a> ·
+  <a href="https://www.npmjs.com/package/agentclash"><code>npm i -g agentclash</code></a> ·
+  <a href="https://github.com/agentclash/agentclash">github</a> · ⭐ 20
+</p>
+
+Race agents against the **same** workload, capture exactly what they did, score the outcome, and turn
+failures into repeatable **regression gates**. Built for teams shipping agents, not leaderboard demos —
+it evaluates the whole run: final answer, tool choices, artifacts, latency, cost, and the evidence trail
+that explains *why* one agent passed and another failed.
+
+- **Challenge packs** — package real tasks, inputs, validators, and scoring rules.
+- **Scorecards & replays** — correctness, reliability, latency, cost + the step-by-step trajectory.
+- **Release gates & CI** — compare a candidate against a saved baseline; gate PRs; promote escaped failures into regression suites.
+- **Try CLI** — interactive in-browser terminal demos of real agent CLIs on disposable [E2B](https://e2b.dev) sandboxes.
+
+I've shipped **39 merged PRs** across the platform — the Try-CLI demo system, eval persistence, prebaked E2B templates, the free-trial gateway/auth, and UI. &nbsp;<sub>Stack: TypeScript · Next.js · E2B · CI/CD</sub>
+
 ### 🌍 Open source & programs
 
 **🟣 Google Summer of Code 2025 · [Scala Center](https://www.gsocorganizations.dev/organization/scala-center/)** — _[workflows4s](https://github.com/business4s/workflows4s)_
@@ -51,14 +72,11 @@ Worked on the **Zowe App Store UI** and Zowe server stability, dev-environment, 
 | Project | What it is | Stack | Links |
 | --- | --- | --- | --- |
 | **chalkboard** | Open-source engine that turns a prompt into a narrated whiteboard explainer video — real images, diagrams, subtitles, music, vision self-correction. MIT, self-hostable, $0 with local models. | TS · Playwright · ffmpeg · LLMs | [repo](https://github.com/Atharva-Kanherkar/chalkboard) · [demo](https://github.com/Atharva-Kanherkar/chalkboard/releases/tag/v0.1.0) |
-| **AgentClash** | Arena + evals for AI coding agents — in-browser terminal demos of real agents and "Vibe Eval" grading. _(39 merged PRs)_ | TS · E2B · Next.js | [agentclash](https://github.com/agentclash/agentclash) |
 | **skillware** | An AI learning harness that orchestrates the learner: pick a topic, get a syllabus + guided path. _(deployed; source private)_ | TS · Next.js · LLMs | [live ↗](https://skillware.vercel.app) |
 | **agent-trace** | Full observability into a Claude Code run — trace every step an agent takes. | TypeScript | [repo](https://github.com/Atharva-Kanherkar/agent-trace) |
-| **windmill-bench** | Open, **execution-graded** public benchmark for AI agents generating Windmill workflows. | TypeScript | [repo](https://github.com/Atharva-Kanherkar/windmill-bench) |
 | **voicey** | Real-time voice translation web app. | TypeScript | [repo](https://github.com/Atharva-Kanherkar/voicey) |
 | **e2b-go** | Unofficial Go SDK for [E2B](https://e2b.dev) sandboxes. | Go | [repo](https://github.com/Atharva-Kanherkar/e2b-go) |
 | **RedLead** | Reddit lead-generation SaaS. | TypeScript | [live ↗](https://www.redlead.net/) |
-| **my-echoes** | Mental-health journaling app. | TypeScript | [live ↗](https://www.my-echoes.app) |
 
 <sub>More live: <a href="https://siptrack.vercel.app">siptrack</a> · <a href="https://koe-neon.vercel.app">koe</a> · <a href="https://chainarena.vercel.app">ChainArena</a> · <a href="https://pulse-seven-blue.vercel.app">Pulse</a> · and ~90 repos on the profile.</sub>
 
