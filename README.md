@@ -65,8 +65,6 @@ that explains *why* one agent passed and another failed.
 - **Release gates & CI** — compare a candidate against a saved baseline; gate PRs; promote escaped failures into regression suites.
 - **Try CLI** — interactive in-browser terminal demos of real agent CLIs on disposable [E2B](https://e2b.dev) sandboxes.
 
-I've shipped **39 merged PRs** across the platform — the Try-CLI demo system, eval persistence, prebaked E2B templates, the free-trial gateway/auth, and UI. &nbsp;<sub>Stack: TypeScript · Next.js · E2B · CI/CD</sub>
-
 ### Featured projects
 
 | Project | What it is | Stack | Links |
@@ -77,7 +75,6 @@ I've shipped **39 merged PRs** across the platform — the Try-CLI demo system, 
 | **agent-trace** | Full observability into a Claude Code run — trace every step an agent takes. | TypeScript | [repo](https://github.com/Atharva-Kanherkar/agent-trace) |
 | **voicey** | Real-time voice translation web app. | TypeScript | [repo](https://github.com/Atharva-Kanherkar/voicey) |
 | **e2b-go** | Unofficial Go SDK for [E2B](https://e2b.dev) sandboxes. | Go | [repo](https://github.com/Atharva-Kanherkar/e2b-go) |
-| **RedLead** | Reddit lead-generation SaaS. | TypeScript | [live](https://www.redlead.net/) |
 
 ### Claude Code skills (open source)
 
@@ -97,30 +94,14 @@ Agent skills I built and use daily — drop the repo into `~/.claude/skills/`.
 ### Experience
 
 **Rimo** — Software Engineer · _Tokyo (AI startup)_
-Building [Rimo Voice](https://rimo.app) — AI that transcribes and summarizes business meetings. Backend + full-stack product work (services, webhooks/dispatch, app features).
+Building [Rimo Voice](https://rimo.app) — AI that transcribes and summarizes business meetings. ~80 merged PRs across the backend (Go), the frontend (TypeScript/React), and the LLM gateway — shipping whole features end-to-end, not just tickets:
+
+- **Meeting Groups** — designed and shipped the subsystem end-to-end: group CRUD + access-control APIs, per-group document templates, calendar events, and auto-applied note settings/titles — plus the participant-management and notes UI.
+- **Outgoing webhooks** — built the outgoing-webhook platform from scratch: settings model, feature flag, `action.completed` events, a URL-validation test endpoint, and fire-and-forget dispatch — backend and settings UI.
+- **LLM prompt caching & cost tracking** — multi-message prompt caching across Claude/Gemini in the LLM gateway, per-query AI-cost accounting via an SSE tee, and sequential-then-parallel template dispatch with cache warming to cut latency.
+- **Transcription quality** — participant dictionary / pronunciation support so names transcribe correctly across the ElevenLabs and Soniox engines.
+- **Knowledge & desktop auth** — folder upload + folder-tree grouping for linked knowledge, and a custom-token flow powering browser-based desktop-app sign-in.
 
 ### Education
 
 **IIIT Jabalpur (IIITDM-J)** — B.Tech, Computer Science.
-
-### Tech
-
-**Languages:** TypeScript · Go · Scala · Python · C++ · Java
-**Web:** Next.js · React · Node · Hono · Scala.js (Tyrian) · Tapir
-**AI:** LLM apps · agents & orchestration · RAG · evals · Claude Code skills · OpenAI / Anthropic / Gemini
-**Infra:** E2B · Vercel · Fly.io · Docker · AWS · Redis · MongoDB · Postgres
-
-> Quick quiz: one of these is a Pokemon, not a framework — **Tyrian**, **Tapir**, or **Hono**? Trick question, they all sound like gym leaders. (It's Tyranitar I keep `import`-ing by accident.)
-
-Honestly though, labels aside — **I'm just an engineer.** Point me at any stack, any domain, anything weird, and I'll learn it on the go. That's the whole job.
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Atharva-Kanherkar&show_icons=true&hide_border=true&theme=tokyonight&count_private=true" height="150" alt="stats">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Atharva-Kanherkar&layout=compact&hide_border=true&theme=tokyonight&langs_count=8" height="150" alt="top langs">
-</p>
-
----
-
-<p align="center">
-  <sub>Outside of code: lifting, hip-hop, and cooking. Be my guest someday. · friendly neighbourhood <s>vibe</s> coder</sub>
-</p>
