@@ -69,6 +69,7 @@ that explains *why* one agent passed and another failed.
 
 | Project | What it is | Stack | Links |
 | --- | --- | --- | --- |
+| **learnframe** | YouTube-first learning toolkit — CLI + SDK that turns public videos into local courses with transcripts, study artifacts, and timestamp-cited Q&A. Open-source, local-first, no vendor lock-in. | TS · yt-dlp · OpenAI | [repo](https://github.com/Atharva-Kanherkar/learnframe) · [`npm i -g learnframe`](https://www.npmjs.com/package/learnframe) |
 | **chalkboard** | Open-source engine that turns a prompt into a narrated whiteboard explainer video — real images, diagrams, subtitles, music, vision self-correction. MIT, self-hostable, $0 with local models. | TS · Playwright · ffmpeg · LLMs | [repo](https://github.com/Atharva-Kanherkar/chalkboard) · [demo](https://github.com/Atharva-Kanherkar/chalkboard/releases/tag/v0.1.0) |
 | **agentic-memory** | Cognitive memory for AI agents — separate semantic / episodic / procedural stores, multimodal embeddings (Gemini), grounded in DeepMind's AGI cognitive framework. | Python · Gemini · embeddings | [repo](https://github.com/agentclash/agentic-memory) · [live](https://memory.agentclash.dev) |
 | **skillware** | An AI learning harness that orchestrates the learner: pick a topic, get a syllabus + guided path. _(deployed; source private)_ | TS · Next.js · LLMs | [live](https://skillware.vercel.app) |
