@@ -73,10 +73,8 @@ that explains *why* one agent passed and another failed.
 | **chalkboard** | Open-source engine that turns a prompt into a narrated whiteboard explainer video — real images, diagrams, subtitles, music, vision self-correction. MIT, self-hostable, $0 with local models. | TS · Playwright · ffmpeg · LLMs | [repo](https://github.com/Atharva-Kanherkar/chalkboard) · [demo](https://github.com/Atharva-Kanherkar/chalkboard/releases/tag/v0.1.0) |
 | **agentic-memory** | Cognitive memory for AI agents — separate semantic / episodic / procedural stores, multimodal embeddings (Gemini), grounded in DeepMind's AGI cognitive framework. | Python · Gemini · embeddings | [repo](https://github.com/agentclash/agentic-memory) · [live](https://memory.agentclash.dev) |
 | **datasmith** | Provider-agnostic SDK + CLI for building targeted synthetic training/eval datasets — a web-grounded seed constructor feeding a weak-vs-strong generation loop (Meta FAIR Autodata), with OpenTelemetry trace ingestion. | Python · LLMs · OTel | [repo](https://github.com/Atharva-Kanherkar/datasmith) |
-| **labclaw** | Always-on AI scientist that fact-checks new ML/code claims — reads the paper and figures, runs a small VM experiment, and reports whether the claim reproduces. | Python · Cerebras/Gemma · multimodal | [repo](https://github.com/Atharva-Kanherkar/labclaw) |
-| **skillware** | An AI learning harness that orchestrates the learner: pick a topic, get a syllabus + guided path. _(deployed; source private)_ | TS · Next.js · LLMs | [live](https://skillware.vercel.app) |
+| **AnimeVocab** | Learn Japanese from the anime you watch — romaji-first Chrome extension, spaced repetition, Listening Mode for Netflix/Crunchyroll, plus Manga Studio and a cloud app. Free, open source, local-first. | TS · Chrome MV3 · Next.js · Cloudflare | [repo](https://github.com/Atharva-Kanherkar/anime-vocab-coach) · [live](https://animevocab.com) |
 | **agent-trace** | Full observability into a Claude Code run — trace every step an agent takes. | TypeScript | [repo](https://github.com/Atharva-Kanherkar/agent-trace) |
-| **voicey** | Real-time voice translation web app. | TypeScript | [repo](https://github.com/Atharva-Kanherkar/voicey) |
 | **e2b-go** | Unofficial Go SDK for [E2B](https://e2b.dev) sandboxes. | Go | [repo](https://github.com/Atharva-Kanherkar/e2b-go) |
 
 ### Claude Code skills (open source)
