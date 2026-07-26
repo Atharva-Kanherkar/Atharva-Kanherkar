@@ -1,7 +1,7 @@
 <h1 align="center">Hey, I'm Atharva</h1>
 
 <p align="center">
-  <b>AI &amp; agents engineer.</b> I build agent systems, LLM dev-tools, and ship products end-to-end.<br/>
+  I build agent systems, LLM dev-tools, and ship products end-to-end.<br/>
   Engineering at <a href="https://rimo.app"><b>Rimo</b></a> (Tokyo AI startup) · GSoC '25 @ Scala Center · LFX @ Open Mainframe Project.<br/>
   Open-source by default.
 </p>
