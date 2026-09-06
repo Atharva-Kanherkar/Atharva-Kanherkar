@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Intel · Atharva → Tokyo</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="hero">
+      <div class="eyebrow">Official sources · X pulse · 6 Sep 2026</div>
+      <h1>What is <em>verified</em>, what is chatter.</h1>
+      <p class="lede">Official pages for medicine, power, climate, transit, banking, and food quarantine. Then a short X/news pulse so the checklist is not only a brochure.</p>
+    </div>
+    <div class="sectionHead"><div><h2>Official</h2></div></div>
+    <div class="sources" id="sources"></div>
+    <div class="sectionHead"><div><h2>X pulse</h2><div class="sectionNote">Useful patterns, not gospel. Tokyo trends tonight were entertainment, not disaster alerts — still install Safety tips.</div></div></div>
+    <div class="two" id="pulse"></div>
+    <div class="card callout"><strong>This is a mockup.</strong> No visa, flight, housing, or company-cash work lives here. Numbers can change. Click through to the official page before you act on medicine, food, or banking.</div>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("sources").innerHTML = Tokyo.data.sources.map((s) =>
+        `<a class="card source" href="${s.u}" target="_blank" rel="noreferrer"><strong>${s.t}</strong><span>${s.s}</span></a>`
+      ).join("");
+      document.getElementById("pulse").innerHTML = Tokyo.data.pulse.map((p) =>
+        `<div class="card pulse"><strong>${p.k}</strong><p>${p.d}</p><span class="tag">${p.s}</span></div>`
+      ).join("");
+    });
+  </script>
+</body>
+</html>

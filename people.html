@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>People · Atharva → Tokyo</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="hero">
+      <div class="eyebrow">Goodbyes · omiyage · distance</div>
+      <h1>Leave as a <em>person</em>, not a logistics problem.</h1>
+      <p class="lede">The last Bengaluru week will try to become fourteen guilt-meetings. Pick the few that matter. Pack modest gifts. Set the channel you will actually keep from Tokyo.</p>
+    </div>
+    <div class="two">
+      <div class="card mini">
+        <h3>Who gets time</h3>
+        <ul>
+          <li>Family: one intentional meal or day. Quality over duration.</li>
+          <li>Two or three friends you do not want distance to quietly delete.</li>
+          <li>One ordinary Bengaluru routine you like — gym, coffee, walk — not a farewell tour.</li>
+          <li>Everyone else: a message is enough. You are not a departing dignitary.</li>
+        </ul>
+      </div>
+      <div class="card mini">
+        <h3>Omiyage rules</h3>
+        <ul>
+          <li>Individually wrapped, shelf-stable, small.</li>
+          <li>Tea, chocolate, snacks. No homemade food. No meat. No fresh sweets.</li>
+          <li>Japan Animal Quarantine is not joking about animal products.</li>
+          <li>This is a gesture for coworkers / new friends, not cargo.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sectionHead"><div><h2>People tasks</h2></div></div>
+    <div class="tasks" id="list"></div>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      Tokyo.renderFiltered("#list", (x) => x.t[2] === "people");
+    });
+  </script>
+</body>
+</html>

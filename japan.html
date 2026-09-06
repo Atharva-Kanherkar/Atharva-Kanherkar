@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Japan OS · Atharva → Tokyo</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="pageHero" style="background-image:url('https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=1600&q=80')">
+      <div class="inner">
+        <div class="eyebrow">Apps · Suica · 110 / 119 · typhoon month</div>
+        <h1>Install Tokyo <em>before</em> the plane.</h1>
+        <p class="lede">Safety tips, a Suica path, offline maps, and two phone numbers in your head. The city is dense. Your first week should not also be an app store.</p>
+      </div>
+    </div>
+    <div class="three" id="emerg"></div>
+    <div class="sectionHead"><div><h2>Suica, without fighting it from India</h2></div></div>
+    <div class="two">
+      <div class="card mini">
+        <h3>Try this from Bengaluru</h3>
+        <ul>
+          <li>Wallet → Transit Card → Suica or PASMO.</li>
+          <li>Eligible payment card already in Wallet. Mastercard / Amex usually fail less than foreign Visa.</li>
+          <li>Turn on Express Mode. Tap the top of the iPhone on the gate. No unlock.</li>
+          <li>If issuance or top-up is blocked outside Japan, stop. Do not burn an evening on it.</li>
+        </ul>
+      </div>
+      <div class="card mini">
+        <h3>Finish on airport Wi-Fi</h3>
+        <ul>
+          <li>Apple’s own page (updated 25 Mar 2026) covers add / transfer / Express Mode.</li>
+          <li>Welcome Suica Mobile is a fallback if Wallet refuses a foreign card.</li>
+          <li>Cash top-up at JR machines still exists if Apple Pay sulks.</li>
+          <li>You only need one IC card. Suica and PASMO are interchangeable on the gates.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card callout"><strong>October:</strong> JMA normals put Tokyo’s wettest month here. Early September 2026 still had typhoon conversation on X. Install Safety tips and Disaster Preparedness Tokyo now, not during the first wind warning.</div>
+    <div class="sectionHead"><div><h2>Japan OS tasks</h2></div></div>
+    <div class="tasks" id="list"></div>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("emerg").innerHTML = Tokyo.data.emergencies.map((e) =>
+        `<div class="card stat"><b>${e.n}</b><p>${e.t}</p></div>`
+      ).join("");
+      Tokyo.renderFiltered("#list", (x) => x.t[2] === "japan");
+    });
+  </script>
+</body>
+</html>

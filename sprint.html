@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>25-day sprint · 1 Oct 2026</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="hero">
+      <div class="eyebrow">6 September → 1 October</div>
+      <h1>The <em>25-day</em> sprint.</h1>
+      <p class="lede">Front-load banks, backups, medicine, and purchases. The last week is for people and sleep, not new errands. Click a day to jump to its phase.</p>
+    </div>
+    <div class="toolbar">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="p0">Must</button>
+      <button data-filter="digital">Digital</button>
+      <button data-filter="money">Money</button>
+      <button data-filter="pack">Pack</button>
+      <button data-filter="japan">Japan</button>
+      <button data-filter="people">People</button>
+      <button data-filter="routine">Routine</button>
+      <input class="search" id="search" placeholder="Search the sprint…" />
+      <button id="copyBtn">Copy remaining</button>
+    </div>
+    <div class="calendar" id="cal"></div>
+    <div id="phases"></div>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      Tokyo.renderCalendar("#cal");
+      Tokyo.renderPhases("#phases");
+    });
+  </script>
+</body>
+</html>

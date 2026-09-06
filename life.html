@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Month one · Atharva → Tokyo</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="hero">
+      <div class="eyebrow">Body · Japanese · café walk · Sunday reset</div>
+      <h1>Write the operating system in <em>India</em>.</h1>
+      <p class="lede">Define it now so Tokyo does not become thirty days of random optimization. Job first. Gym four times. Japanese twenty minutes. One social plan. Guitar on Sundays.</p>
+    </div>
+    <div class="ruleGrid" id="rules"></div>
+    <div class="sectionHead"><div><h2>Five default meals</h2><div class="sectionNote">Do not depend on a suitcase of protein.</div></div></div>
+    <div class="meals" id="meals"></div>
+    <div class="card callout"><strong>Konbini tip, from current Tokyo chatter:</strong> separate hot and cold items before you walk. Condensation and heat make a simple errand feel sloppy. Also: living in Japan will not make you fluent. The 20-minute streak is the whole game.</div>
+    <div class="sectionHead"><div><h2>Routine tasks</h2></div></div>
+    <div class="tasks" id="list"></div>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("rules").innerHTML = Tokyo.data.rules.map((r) =>
+        `<div class="card rule"><div class="n">${r.n} · ${r.k}</div><h3>${r.t}</h3><p>${r.d}</p></div>`
+      ).join("");
+      document.getElementById("meals").innerHTML = Tokyo.data.meals.map((m) =>
+        `<div class="card meal"><strong>${m.t}</strong><p>${m.d}</p></div>`
+      ).join("");
+      Tokyo.renderFiltered("#list", (x) => x.t[2] === "routine");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Money · Atharva → Tokyo</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="pageHero" style="background-image:url('https://images.unsplash.com/photo-1554797589-7241bb691973?auto=format&fit=crop&w=1600&q=80')">
+      <div class="inner">
+        <div class="eyebrow">HDFC · cards · FEMA</div>
+        <h1>Make money <em>survive</em> the border.</h1>
+        <p class="lede">Two cards. A living India number for OTPs. A written NRO plan — executed after your status actually changes, not as a panic conversion this week.</p>
+      </div>
+    </div>
+    <div class="three">
+      <div class="card stat"><b>2</b><p>Independent cards. Different bank or network if you can.</p></div>
+      <div class="card stat"><b>NRO</b><p>RBI: leaving for employment means resident accounts get redesignated. Do not convert blindly on 15 September.</p></div>
+      <div class="card stat"><b>Remote</b><p>Save the close / convert path now. People get stuck doing this from Japan.</p></div>
+    </div>
+    <div class="sectionHead"><div><h2>What this page is really about</h2></div></div>
+    <div class="two">
+      <div class="card mini">
+        <h3>Do now</h3>
+        <ul>
+          <li>International POS / ATM / online on the primary card. Check limits.</li>
+          <li>Second card that can float a week if the first is frozen.</li>
+          <li>Download statements. Kill India-only autopays.</li>
+          <li>Screenshot HDFC resident→NRO form and KYC list.</li>
+        </ul>
+      </div>
+      <div class="card mini">
+        <h3>Do after you are actually NRI</h3>
+        <ul>
+          <li>Redesignate accounts to NRO. HDFC will typically hotlist the international debit card and issue a replacement.</li>
+          <li>You will need PAN, passport, visa, and an overseas address.</li>
+          <li>Map FDs, demat, SIPs, joint accounts before you touch anything.</li>
+          <li>Company arrival cash is excluded. This is your own float and India cleanup.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card callout"><strong>Official:</strong> RBI notification on redesignation, and the current HDFC resident-to-NRO process, are linked on Intel. This page is a mockup of personal prep, not tax advice.</div>
+    <div class="sectionHead"><div><h2>Money tasks</h2><div class="sectionNote">Filtered from the 25-day sprint.</div></div></div>
+    <div class="toolbar">
+      <button class="active" data-filter="all">All here</button>
+      <button data-filter="p0">Must</button>
+    </div>
+    <div class="tasks" id="list"></div>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      Tokyo.renderFiltered("#list", (x) => x.t[2] === "money");
+    });
+  </script>
+</body>
+</html>

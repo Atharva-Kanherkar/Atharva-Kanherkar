@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Digital · Atharva → Tokyo</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="pageHero" style="background-image:url('https://images.unsplash.com/photo-1513407030348-c983a97b98d8?auto=format&fit=crop&w=1600&q=80')">
+      <div class="inner">
+        <div class="eyebrow">2FA · backups · SIM · machine</div>
+        <h1>Your laptop is <em>immigration</em> too.</h1>
+        <p class="lede">If GitHub, banking, or Apple recovery depends on an Indian SMS you cannot receive, you do not have a working life in Tokyo. Fix identity before packing hoodies.</p>
+      </div>
+    </div>
+    <div class="three">
+      <div class="card mini"><h3>Identity</h3><ul>
+        <li>Export 2FA recovery codes. Test one restore.</li>
+        <li>Password manager offline access.</li>
+        <li>Recovery email that is not only the India number.</li>
+      </ul></div>
+      <div class="card mini"><h3>Phone</h3><ul>
+        <li>Confirm the device is unlocked.</li>
+        <li>Keep India SIM alive for OTPs.</li>
+        <li>Travel eSIM is fine for week one. Resident number waits for the residence card.</li>
+      </ul></div>
+      <div class="card mini"><h3>Machine</h3><ul>
+        <li>Encrypted local backup + cloud for irreplaceable work.</li>
+        <li>SSH keys, Git creds, disk space, OS updates.</li>
+        <li>Hardware key if you already use one. Do not buy a new gadget hobby this week.</li>
+      </ul></div>
+    </div>
+    <div class="sectionHead"><div><h2>Carrier reality</h2><div class="sectionNote">Shortlist now. Sign later.</div></div></div>
+    <div class="two" id="sims"></div>
+    <div class="sectionHead"><div><h2>Digital tasks</h2></div></div>
+    <div class="tasks" id="list"></div>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("sims").innerHTML = Tokyo.data.sims.map((s) =>
+        `<div class="card sim"><strong>${s.t}</strong><p>${s.d}</p></div>`
+      ).join("");
+      Tokyo.renderFiltered("#list", (x) => x.t[2] === "digital");
+    });
+  </script>
+</body>
+</html>

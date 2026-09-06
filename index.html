@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Command · Atharva → Tokyo · 1 Oct 2026</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <header>
+    <div class="wrap hero">
+      <div class="eyebrow">Personal migration system · Bengaluru → Tokyo</div>
+      <h1>Land on <em>1 October</em>, not in chaos.</h1>
+      <p class="lede">Not a visa checklist. Not a flight checklist. Not company logistics. This is the work only you can do before you land: money, devices, packing, body, Japanese, people, and a first-month operating system.</p>
+      <div class="excluded" id="excluded"></div>
+      <div class="gridTop">
+        <div class="card countCard">
+          <div>
+            <div class="count" id="days">—</div>
+            <div class="countLabel">days until Tokyo</div>
+          </div>
+          <div>
+            <div class="countLabel" style="margin-bottom:6px">Target landing</div>
+            <input class="dateInput" id="moveDate" type="date" value="2026-10-01" />
+          </div>
+        </div>
+        <div class="card progressCard">
+          <div class="ensoWrap">
+            <svg class="enso" viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#2a241c" stroke-width="8"/>
+              <circle id="ensoFill" cx="50" cy="50" r="42" fill="none" stroke="#d4483a" stroke-width="8" stroke-linecap="round" stroke-dasharray="263.89" stroke-dashoffset="263.89" transform="rotate(-90 50 50)"/>
+            </svg>
+            <div style="flex:1">
+              <div style="display:flex;justify-content:space-between"><b>Prep completion</b><b data-pct>0%</b></div>
+              <div class="bar"><div data-bar></div></div>
+              <div class="progressText"><span data-done>0 done</span><span data-left>0 left</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card focus"><b>Current focus</b><p id="focusText"></p></div>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="toolbar">
+      <button class="active" data-filter="all">All musts</button>
+      <button data-filter="p0">Must</button>
+      <button data-filter="money">Money</button>
+      <button data-filter="digital">Digital</button>
+      <button data-filter="pack">Pack</button>
+      <a class="btn" href="sprint.html">Open 25-day sprint</a>
+      <button id="copyBtn">Copy remaining</button>
+      <button onclick="window.print()">Print</button>
+    </div>
+    <div class="sectionHead">
+      <div>
+        <h2>Minimum viable move</h2>
+        <div class="sectionNote">If the next weeks get chaotic, finish these first.</div>
+      </div>
+    </div>
+    <div class="tasks" id="mustTasks"></div>
+    <div class="sectionHead">
+      <div>
+        <h2>October weather is the packing brief</h2>
+        <div class="sectionNote">JMA 1991–2020 normals for Tokyo. You are not packing for Hokkaido winter.</div>
+      </div>
+    </div>
+    <div class="three" id="climate"></div>
+    <div class="card callout"><strong>Tokyo on 1 October:</strong> mean 18.0°C, and October is the wettest month (234.8 mm). T-shirts, a real rain layer, and walking shoes. Buy the winter coat after you feel late autumn.</div>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const { data, renderMust } = Tokyo;
+      document.getElementById("excluded").innerHTML = data.excluded.map((x) => `<span class="chip">Excluded: ${x}</span>`).join("");
+      document.getElementById("climate").innerHTML = data.climate.map((c) =>
+        `<div class="card stat"><b>${c.temp}</b><div>${c.m} mean</div><p>${c.rain} rain · ${c.note}</p></div>`
+      ).join("");
+      renderMust("#mustTasks");
+    });
+  </script>
+</body>
+</html>

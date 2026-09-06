@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pack · Atharva → Tokyo</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="pageHero" style="background-image:url('https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1600&q=80')">
+      <div class="inner">
+        <div class="eyebrow">Voltage · rain · quarantine</div>
+        <h1>You are moving to <em>Tokyo</em>, not Mars.</h1>
+        <p class="lede">100V, Type A, 50Hz in Tokyo. October is the wettest month. Meat and most fresh plants from India are a hard no. Pack the weekly version of your life.</p>
+      </div>
+    </div>
+    <div class="buyGrid" id="buy"></div>
+    <div class="card callout"><strong>Power label test:</strong> if it says 100–240V, you only need the plug shape. If it says 220–240V only, leave the hair dryer. Tiny travel converters will not survive a 1200W heat tool.</div>
+    <div class="sectionHead"><div><h2>Landing kit builder</h2><div class="sectionNote">Check what goes in the bag you can open at 1am.</div></div></div>
+    <div class="tasks" id="kit"></div>
+    <div class="sectionHead"><div><h2>Pack / medicine / quarantine tasks</h2></div></div>
+    <div class="tasks" id="list"></div>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const { data, renderFiltered } = Tokyo;
+      const cols = [
+        ["Buy / bring from India", data.buy.india],
+        ["Buy in Tokyo", data.buy.tokyo],
+        ["Do not overpack", data.buy.skip],
+      ];
+      document.getElementById("buy").innerHTML = cols.map(([t, items]) =>
+        `<div class="card mini"><h3>${t}</h3><ul>${items.map((i) => `<li>${i}</li>`).join("")}</ul></div>`
+      ).join("");
+      document.getElementById("kit").innerHTML = [
+        ["kit-clothes", "One full change of clothes in the personal item.", "The suitcase can lose. You cannot."],
+        ["kit-charge", "Charger, two cables, adapter, power bank at 100%.", "Work-ready the first morning."],
+        ["kit-med", "Daily medicine in original boxes + prescription copy.", "Not loose pills in a plastic bag."],
+        ["kit-hygiene", "24-hour grooming, contacts / glasses, any specific deodorant.", "Konbini can fill gaps. Do not pack a pharmacy."],
+        ["kit-work", "Laptop, headphones, unlocked phone, offline maps.", "You land into a job, not a vacation."],
+      ].map(([id, title, detail]) => Tokyo.taskHTML({ t: [id, title, "pack", "p0", "D-2", detail], phaseId: "land" })).join("");
+      Tokyo.bindChecks(document.getElementById("kit"));
+      renderFiltered("#list", (x) => x.t[2] === "pack");
+    });
+  </script>
+</body>
+</html>
